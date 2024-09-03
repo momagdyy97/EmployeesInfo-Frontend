@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 const EditItem = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -13,7 +13,7 @@ const EditItem = () => {
   useEffect(() => {
     const fetchItem = async () => {
       try {
-        const { data } = await axios.get(`http://3.29.24.171:3001/api/items/${id}`);
+        const { data } = await axios.get(`https://employeesinfo.hopto.org/api/items/${id}`);
         setName(data.name);
         setDescription(data.description);
       } catch (err) {
@@ -28,7 +28,7 @@ const EditItem = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://3.29.24.171:3001/api/items/${id}`, { name, description });
+      await axios.put(`https://employeesinfo.hopto.org/api/items/${id}`, { name, description });
       navigate('/');
     } catch (err) {
       setError('Failed to update item. Please try again.');
@@ -38,7 +38,7 @@ const EditItem = () => {
 
   return (
     <div className="container">
-      <h1>Edit Item</h1>
+      <h1>Edit Employee or Department</h1>
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -52,7 +52,7 @@ const EditItem = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="description">Description</label>
+          <label htmlFor="description">Department</label>
           <input
             id="description"
             type="text"
@@ -65,6 +65,9 @@ const EditItem = () => {
         {error && <p className="error">{error}</p>}
         <button type="submit" className="btn">Update Item</button>
       </form>
+      <div className="button-container">
+        <Link to="/" className="btn btn-create">Back</Link>
+      </div>
     </div>
   );
 };

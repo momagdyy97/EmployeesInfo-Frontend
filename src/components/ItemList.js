@@ -10,7 +10,7 @@ const ItemList = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get('http://3.29.24.171:3001/api/items'); // Update with your backend URL
+        const response = await axios.get('https://employeesinfo.hopto.org/api/items'); // Update with your backend URL
         setItems(response.data);
       } catch (err) {
         setError('Failed to fetch items. Please try again.');
@@ -22,16 +22,18 @@ const ItemList = () => {
 
   return (
     <div className="container">
-      <h1>Item List</h1>
+      <h1>8com-Limited</h1>
+      <h2>Employees Info</h2>
+      <h3>احنا التيم الجامد جدا</h3>
       {error && <p className="error">{error}</p>}
       <div className="button-container">
-        <Link to="/create" className="btn btn-create">Create New Item</Link>
+        <Link to="/create" className="btn btn-create">Create New Employee</Link>
       </div>
       <table className="item-table">
         <thead>
           <tr>
             <th>Name</th>
-            <th>Description</th>
+            <th>Department</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -49,7 +51,7 @@ const ItemList = () => {
             ))
           ) : (
             <tr>
-              <td colSpan="3">No items available.</td>
+              <td colSpan="3">There is no Employee inserted to the database yet.</td>
             </tr>
           )}
         </tbody>

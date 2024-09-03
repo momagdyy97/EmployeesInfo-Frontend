@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 const CreateItem = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -12,7 +12,7 @@ const CreateItem = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://3.29.24.171:3001/api/items', { name, description });
+      await axios.post('https://employeesinfo.hopto.org/api/items', { name, description });
       navigate('/');
     } catch (err) {
       setError('Failed to create item. Please try again.');
@@ -21,7 +21,7 @@ const CreateItem = () => {
 
   return (
     <div className="container">
-      <h1>Create New Item</h1>
+      <h1>Create New Employee</h1>
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -35,7 +35,7 @@ const CreateItem = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="description">Description</label>
+          <label htmlFor="description">Department</label>
           <input
             id="description"
             type="text"
@@ -46,8 +46,11 @@ const CreateItem = () => {
           />
         </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit" className="btn">Add Item</button>
-      </form>
+        <button type="submit" className="btn">Add Employee</button>
+      </form> 
+      <div className="button-container">
+        <Link to="/" className="btn btn-create">Back</Link>
+      </div>
     </div>
   );
 };

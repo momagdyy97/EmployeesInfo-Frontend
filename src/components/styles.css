@@ -74,3 +74,12 @@ h1 {
   display: flex;
   gap: 10px;
 }
+/* Add space below the button */
+.form button {
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Add space above the button-container */
+.button-container {
+  margin-top: 20px; /* Adjust as needed */
+}
