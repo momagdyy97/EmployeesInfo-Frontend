@@ -24,9 +24,10 @@ const ItemList = () => {
     <div className="container">
       <h1>8com-Limited</h1>
       <h2>Employees Info</h2>
+      <h3>احنا التيم الجامد</h3>
       {error && <p className="error">{error}</p>}
       <div className="button-container">
-        <Link to="/create" className="btn btn-create">Create New Employee</Link>
+      <Link to="/create" className="btn btn-create">Create New Employee</Link>
       </div>
       <table className="item-table">
         <thead>
