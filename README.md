@@ -8,8 +8,8 @@ EmployeesInfo is the frontend service for the EmployeesInfo application. It is b
 
 1. **Clone the repository:**
 
-- git clone https://github.com/your-username/your-repository.git
-
+- https://github.com/momagdyy97/Zomool-Admin-Panel-Essam.git
+  
 - cd your-repository
 
 3. **Install dependencies:**
