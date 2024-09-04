@@ -1,4 +1,4 @@
-### Zomool-Admin-Panel-Essam
+## Zomool-Admin-Panel-Essam
 
 ## Overview
 
@@ -47,11 +47,11 @@ Zomool-Admin-Panel-Essam is the frontend admin panel for the Zomool application.
 
 1. Build the Docker image
 
-- docker build -t  <your-docker-username>/zomool-admin-panel-essam .
+- docker build -t  **<your-docker-username>** /zomool-admin-panel-essam .
 
 2. Run the Docker container
 
-- docker run -d -p 3000:3000 --name <your-docker-username>/zomool-admin-panel-essam
+- docker run -d -p 3000:3000 **<your-docker-username>** /zomool-admin-panel-essam
 
 - The admin panel will be accessible on http://localhost:3000 inside the container.
 
