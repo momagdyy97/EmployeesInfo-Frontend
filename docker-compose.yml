@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./Zomool-Admin-Panel-Essam
+      dockerfile: Dockerfile
+    image: momousa1997/mern-frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./Essam-Zomool-Backend
+      dockerfile: Dockerfile
+    image: momousa1997/mern-backend
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
