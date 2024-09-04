@@ -12,13 +12,6 @@ Zomool-Admin-Panel-Essam is the frontend admin panel for the Zomool application.
 - Dockerized for containerized deployment.
 - Integrated with CI/CD pipelines.
 
-## Prerequisites
-
-- Node.js (v14.x or higher)
-- Docker (optional, for containerization)
-- Git
-- React.js
-
 ### Setup
 
 ### 1. Clone the repository
