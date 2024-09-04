@@ -24,7 +24,6 @@ const ItemList = () => {
     <div className="container">
       <h1>Technical Team</h1>
       <h2>Employees Info</h2>
-      <h3>احنا التيم الجامد جدا</h3>
       {error && <p className="error">{error}</p>}
       <div className="button-container">
         <Link to="/create" className="btn btn-create">Create New Employee</Link>
