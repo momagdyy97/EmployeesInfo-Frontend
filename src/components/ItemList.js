@@ -22,7 +22,7 @@ const ItemList = () => {
 
   return (
     <div className="container">
-      <h1>8com-Limited</h1>
+      <h1>Technical Team</h1>
       <h2>Employees Info</h2>
       <h3>احنا التيم الجامد جدا</h3>
       {error && <p className="error">{error}</p>}
