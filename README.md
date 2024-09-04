@@ -1,8 +1,8 @@
-## Zomool-Admin-Panel-Essam
+## EmployeesInfo-Frontend
 
 ## Overview
 
-Zomool-Admin-Panel-Essam is the frontend admin panel for the Zomool application. It is built using React.js and is designed to interface with the `Essam-Zomool-Backend` service. The project is Dockerized for seamless deployment and integration with CI/CD pipelines.
+EmployeesInfo-Frontend is the frontend admin panel for the Zomool application. It is built using React.js and is designed to interface with the `EmployeesInfo-Backend` service. The project is Dockerized for seamless deployment and integration with CI/CD pipelines.
 
 ## Features
 
@@ -16,7 +16,7 @@ Zomool-Admin-Panel-Essam is the frontend admin panel for the Zomool application.
 
 ### 1. Clone the repository
 
-- git clone https://github.com/momagdyy97/Zomool-Admin-Panel-Essam.git
+- git clone https://github.com/momagdyy97/EmployeesInfo-Frontend.git
 
 - cd Zomool-Admin-Panel-Essam
 
