@@ -22,7 +22,7 @@ const ItemList = () => {
 
   return (
     <div className="container">
-      <h1>8com-Limited Teams </h1>
+      <h1>8com-Limited</h1>
       <h2>Employees Info</h2>
       {error && <p className="error">{error}</p>}
       <div className="button-container">
