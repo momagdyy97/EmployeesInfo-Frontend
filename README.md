@@ -1,45 +1,57 @@
-# EmployeesInfo FrontEnd
+### Zomool-Admin-Panel-Essam
 
 ## Overview
 
-EmployeesInfo is the frontend service for the EmployeesInfo application. It is built using Node.js and React.js.
+Zomool-Admin-Panel-Essam is the frontend admin panel for the Zomool application. It is built using React.js and is designed to interface with the `Essam-Zomool-Backend` service. The project is Dockerized for seamless deployment and integration with CI/CD pipelines.
 
-## Installation
+## Features
 
-1. **Clone the repository:**
+- User-friendly UI for managing application data.
+- Integration with the backend RESTful APIs.
+- State management using Redux.
+- Dockerized for containerized deployment.
+- Integrated with CI/CD pipelines.
 
-- https://github.com/momagdyy97/Zomool-Admin-Panel-Essam.git
-  
-- cd your-repository
+## Prerequisites
 
-3. **Install dependencies:**
+- Node.js (v14.x or higher)
+- Docker (optional, for containerization)
+- Git
+- React.js
+
+### Setup
+
+### 1. Clone the repository
+
+- git clone https://github.com/momagdyy97/Zomool-Admin-Panel-Essam.git
+
+- cd Zomool-Admin-Panel-Essam
+
+### 2. Install dependencies
 
 - npm install
 
-3. **Create a .env file in the root directory and add your environment variables.**
+### 3. Environment Variables
 
-4. **Build**
+- Create a .env file in the root directory and add the following:
+ 
+- REACT_APP_API_URL=<backend-api-url>
 
-Run the following command to build the project:
-
-- npm run build
-
-**Usage**
-
-Start the project with:
+### 4. Run the application
 
 - npm start
 
-**Contributing**
+- The frontend will be accessible on http://localhost:3000.
 
-Fork the repository.
+### Docker Setup
 
-- Create a new branch (git checkout -b feature-branch).
+1. Build the Docker image
 
-- Make your changes.
+- docker build -t  <your-docker-username>/zomool-admin-panel-essam .
 
-- Commit your changes (git commit -m 'Add some feature').
+2. Run the Docker container
 
-- Push to the branch (git push origin feature-branch).
+- docker run -d -p 3000:3000 --name <your-docker-username>/zomool-admin-panel-essam
 
-- Open a pull request.
+- The admin panel will be accessible on http://localhost:3000 inside the container.
+
