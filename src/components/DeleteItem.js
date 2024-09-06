@@ -20,13 +20,13 @@ const DeleteItem = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1>8com-Limited</h1>
+        <h1>Employees Info</h1>
         <h2>Delete Employee</h2>
       </header>
       <p>Are you sure you want to delete this employee?</p>
       <div className="button-container">
-        <button onClick={handleDelete} className="btn btn-delete">Yes, Delete</button>
-        <Link to="/" className="btn btn-back">Cancel</Link>
+        <button onClick={handleDelete} className="btn btn-delete btn-left">Yes, Delete</button>
+        <Link to={"/"} className="btn btn-delete btn-right">Cancel</Link>
       </div>
     </div>
   );

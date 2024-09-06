@@ -38,7 +38,7 @@ const EditItem = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1>8com-Limited</h1>
+        <h1>Employees Info</h1>
         <h2>Edit Employee</h2>
       </header>
       <form onSubmit={handleSubmit} className="form">
@@ -69,7 +69,7 @@ const EditItem = () => {
         {error && <p className="error">{error}</p>}
         <div className="button-container">
           <button type="submit" className="btn btn-edit">Update Employee</button>
-          <Link to="/" className="btn btn-back">Back</Link>
+          <Link to={"/"} className="btn btn-delete btn-right">Cancel</Link>
         </div>
       </form>
     </div>

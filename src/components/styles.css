@@ -58,12 +58,19 @@
   border-radius: 4px;
 }
 
+.button-space {
+  display: inline-block;
+  width: 10px; /* Adjust as needed */
+}
+
 .btn {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
+  margin: 5px; /* Add margin to ensure some space around buttons */
+  text-decoration: none;
 }
 
 .btn-create {
@@ -76,6 +83,8 @@
 
 .button-container {
   text-align: left;
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
 }
 
@@ -155,10 +164,22 @@
 /* Button styles */
 .btn-edit {
   background-color: #ffc107;
+  color: white;
 }
 
 .btn-delete {
   background-color: #dc3545;
+  color: white;
+}
+
+.btn-left {
+  background-color: #f44336; /* Red for Delete */
+  color: white;
+}
+
+.btn-right {
+  background-color: #4CAF50; /* Green for Cancel */
+  color: white;
 }
 
 .btn-pagination {

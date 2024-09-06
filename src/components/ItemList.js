@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './styles.css';
-
 const ItemList = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState('');
@@ -10,10 +9,8 @@ const ItemList = () => {
   const [description, setDescription] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-
   // List of descriptions for filtering
-  const descriptions = ['HR', 'DevOps', 'Software Developer', 'E-commerce', 'Finance', 'Design', 'Managers']; // Adjust this list as needed
-
+  const descriptions = ['HR', 'DevOps', 'Software Developer', 'E-commerce', 'Finance', 'UI/UX Design', 'Managers']; // Adjust this list as needed
   useEffect(() => {
     fetchItems();
   }, [searchTerm, description, page]);
@@ -29,17 +26,12 @@ const ItemList = () => {
       setError('Failed to fetch items. Please try again.');
     }
   };
-
   return (
     <div className="container">
       <header className="header">
-        <h1>8com-Limited</h1>
-        <h2>Employees Info</h2>
-        <h3>احنا التيم الجامد</h3>
+        <h1>Employees Info</h1>
       </header>
-      
       {error && <p className="error">{error}</p>}
-      
       {/* Search and Filter UI */}
       <div className="search-container">
         <input
@@ -63,7 +55,6 @@ const ItemList = () => {
       <div className="button-container">
         <Link to="/create" className="btn btn-create">Create New Employee</Link>
       </div>
-     
       <div className="spacer"></div>
       <table className="item-table">
         <thead>
@@ -80,8 +71,9 @@ const ItemList = () => {
                 <td>{item.name}</td>
                 <td>{item.description}</td>
                 <td>
-                  <Link to={`/edit/${item._id}`} className="btn btn-edit">Edit</Link>
-                  <Link to={`/delete/${item._id}`} className="btn btn-delete">Delete</Link>
+                <Link to={`/edit/${item._id}`} className="btn btn-edit">Edit</Link>
+                <span className="button-space"></span> {/* Adding a space between buttons */}
+                <Link to={`/delete/${item._id}`} className="btn btn-delete">Delete</Link>
                 </td>
               </tr>
             ))
@@ -114,5 +106,4 @@ const ItemList = () => {
     </div>
   );
 };
-
 export default ItemList;
