@@ -12,7 +12,7 @@ const ItemList = () => {
   const [totalPages, setTotalPages] = useState(1);
 
   // List of descriptions for filtering
-  const descriptions = ['HR', 'Engineering', 'Marketing', 'Finance']; // Adjust this list as needed
+  const descriptions = ['HR', 'DevOps', 'Software Developer', 'E-commerce', 'Finance', 'Design', 'Managers']; // Adjust this list as needed
 
   useEffect(() => {
     fetchItems();

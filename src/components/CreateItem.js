@@ -1,8 +1,9 @@
-// src/components/CreateItem.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './styles.css';
+
 const CreateItem = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -15,23 +16,27 @@ const CreateItem = () => {
       await axios.post('https://employeesinfo.hopto.org/api/items', { name, description });
       navigate('/');
     } catch (err) {
-      setError('Failed to create item. Please try again.');
+      setError('Failed to create employee. Please try again.');
     }
   };
 
   return (
     <div className="container">
-      <h1>Create New Employee</h1>
+      <header className="header">
+        <h1>8com-Limited</h1>
+        <h2>Create New Employee</h2>
+      </header>
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
             id="name"
             type="text"
-            placeholder="Enter item name"
+            placeholder="Enter employee name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            className="input"
           />
         </div>
         <div className="form-group">
@@ -39,20 +44,22 @@ const CreateItem = () => {
           <input
             id="description"
             type="text"
-            placeholder="Enter item description"
+            placeholder="Enter employee department"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
+            className="input"
           />
         </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit" className="btn">Add Employee</button>
-      </form> 
-      <div className="button-container">
-        <Link to="/" className="btn btn-create">Back</Link>
-      </div>
+        <div className="button-container">
+          <button type="submit" className="btn btn-create">Add Employee</button>
+          <Link to="/" className="btn btn-back">Back</Link>
+        </div>
+      </form>
     </div>
   );
 };
 
 export default CreateItem;
+

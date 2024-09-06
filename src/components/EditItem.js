@@ -1,8 +1,9 @@
-// src/components/EditItem.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './styles.css';
+
 const EditItem = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -17,8 +18,7 @@ const EditItem = () => {
         setName(data.name);
         setDescription(data.description);
       } catch (err) {
-        setError('Failed to fetch item details. Make sure the server is running and the item ID is correct.');
-        console.error('Error fetching item details:', err);
+        setError('Failed to fetch employee details. Please try again.');
       }
     };
 
@@ -31,24 +31,27 @@ const EditItem = () => {
       await axios.put(`https://employeesinfo.hopto.org/api/items/${id}`, { name, description });
       navigate('/');
     } catch (err) {
-      setError('Failed to update item. Please try again.');
-      console.error('Error updating item:', err);
+      setError('Failed to update employee. Please try again.');
     }
   };
 
   return (
     <div className="container">
-      <h1>Edit Employee or Department</h1>
+      <header className="header">
+        <h1>8com-Limited</h1>
+        <h2>Edit Employee</h2>
+      </header>
       <form onSubmit={handleSubmit} className="form">
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
             id="name"
             type="text"
-            placeholder="Enter item name"
+            placeholder="Enter employee name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            className="input"
           />
         </div>
         <div className="form-group">
@@ -56,18 +59,19 @@ const EditItem = () => {
           <input
             id="description"
             type="text"
-            placeholder="Enter item description"
+            placeholder="Enter employee department"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
+            className="input"
           />
         </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit" className="btn">Update Item</button>
+        <div className="button-container">
+          <button type="submit" className="btn btn-edit">Update Employee</button>
+          <Link to="/" className="btn btn-back">Back</Link>
+        </div>
       </form>
-      <div className="button-container">
-        <Link to="/" className="btn btn-create">Back</Link>
-      </div>
     </div>
   );
 };

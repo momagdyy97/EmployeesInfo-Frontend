@@ -34,6 +34,75 @@
   margin-bottom: 20px;
 }
 
+/* Form */
+.form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-create {
+  background-color: #28a745;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.button-container {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.btn-create,
+.btn-danger {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Table */
+.item-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.item-table th,
+.item-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.item-table th {
+  background-color: #f8f9fa;
+}
+
 /* Search Container */
 .search-container {
   display: flex;
@@ -55,53 +124,8 @@
   border-radius: 4px;
 }
 
-.btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.button-container {
-  text-align: left; /* Adjust as needed */
-}
-
-.btn-create {
-  background-color: #28a745;
-}
-
 .btn-search {
   background-color: #007bff;
-}
-
-.btn-edit {
-  background-color: #ffc107;
-}
-
-.btn-delete {
-  background-color: #dc3545;
-}
-
-.btn-pagination {
-  background-color: #6c757d;
-}
-
-/* Table */
-.item-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.item-table th, .item-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-.item-table th {
-  background-color: #f8f9fa;
 }
 
 /* Pagination Controls */
@@ -125,5 +149,24 @@
 }
 
 .spacer {
-  margin-bottom: 20px; /* Adjust this value to control the amount of space */
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.btn-edit {
+  background-color: #ffc107;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+}
+
+.btn-pagination {
+  background-color: #6c757d;
+}
+
+/* Button Container */
+.button-container {
+  text-align: left;
+  margin-top: 20px;
 }
