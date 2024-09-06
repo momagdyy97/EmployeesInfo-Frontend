@@ -63,7 +63,8 @@ const ItemList = () => {
       <div className="button-container">
         <Link to="/create" className="btn btn-create">Create New Employee</Link>
       </div>
-
+      <br>
+      <br>
       <table className="item-table">
         <thead>
           <tr>
