@@ -63,6 +63,10 @@
   cursor: pointer;
 }
 
+.button-container {
+  text-align: left; /* Adjust as needed */
+}
+
 .btn-create {
   background-color: #28a745;
 }
@@ -118,4 +122,8 @@
 
 .pagination-container button[disabled] {
   background-color: #ccc;
+}
+
+.spacer {
+  margin-bottom: 20px; /* Adjust this value to control the amount of space */
 }

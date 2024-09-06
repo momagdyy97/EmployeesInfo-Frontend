@@ -50,7 +50,7 @@ const ItemList = () => {
           className="search-input"
         />
         <select value={description} onChange={(e) => setDescription(e.target.value)} className="filter-select">
-          <option value="">All Descriptions</option>
+          <option value="">All Departments</option>
           {descriptions.map((desc) => (
             <option key={desc} value={desc}>
               {desc}
@@ -63,13 +63,13 @@ const ItemList = () => {
       <div className="button-container">
         <Link to="/create" className="btn btn-create">Create New Employee</Link>
       </div>
-      <br>
-      <br>
+     
+      <div className="spacer"></div>
       <table className="item-table">
         <thead>
           <tr>
             <th>Name</th>
-            <th>Description</th>
+            <th>Department</th>
             <th>Actions</th>
           </tr>
         </thead>
