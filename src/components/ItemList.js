@@ -32,9 +32,11 @@ const ItemList = () => {
 
   return (
     <div className="container">
-      <h1>8com-Limited</h1>
-      <h2>Employees Info</h2>
-      <h3>احنا التيم الجامد</h3>
+      <header className="header">
+        <h1>8com-Limited</h1>
+        <h2>Employees Info</h2>
+        <h3>احنا التيم الجامد</h3>
+      </header>
       
       {error && <p className="error">{error}</p>}
       
@@ -45,8 +47,9 @@ const ItemList = () => {
           placeholder="Search by name..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
         />
-        <select value={description} onChange={(e) => setDescription(e.target.value)}>
+        <select value={description} onChange={(e) => setDescription(e.target.value)} className="filter-select">
           <option value="">All Descriptions</option>
           {descriptions.map((desc) => (
             <option key={desc} value={desc}>
@@ -54,7 +57,7 @@ const ItemList = () => {
             </option>
           ))}
         </select>
-        <button onClick={() => setPage(1)}>Search</button>
+        <button onClick={() => setPage(1)} className="btn btn-search">Search</button>
       </div>
 
       <div className="button-container">
@@ -94,6 +97,7 @@ const ItemList = () => {
         <button
           onClick={() => setPage(prevPage => Math.max(prevPage - 1, 1))}
           disabled={page === 1}
+          className="btn btn-pagination"
         >
           Previous
         </button>
@@ -101,6 +105,7 @@ const ItemList = () => {
         <button
           onClick={() => setPage(prevPage => Math.min(prevPage + 1, totalPages))}
           disabled={page === totalPages}
+          className="btn btn-pagination"
         >
           Next
         </button>
