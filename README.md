@@ -28,7 +28,7 @@ EmployeesInfo-Frontend is the frontend admin panel for the Zomool application. I
 
 - Create a .env file in the root directory and add the following:
  
-- REACT_APP_API_URL= **backend-api-ur**
+- REACT_APP_API_URL= **backend-api-url**
 
 ### 4. Run the application
 
